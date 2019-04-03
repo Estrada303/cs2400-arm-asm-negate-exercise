@@ -1,6 +1,7 @@
 main
 		sub		sp, sp, #28
 		adr		r3, words
+		adr             r6, words
 		mov		r4, sp
 		mov		r5, r3
 		ldmia	r5!, {r0, r1, r2, r3}
@@ -32,6 +33,7 @@ L9
 		add		r1, sp, #24
 		add		r3, r3, r1
 		str		r2, [r3, #-24]
+		str             r2, [r6]
 L5
 		ldr		r3, [sp, #20]
 		adds		r3, r3, #1
